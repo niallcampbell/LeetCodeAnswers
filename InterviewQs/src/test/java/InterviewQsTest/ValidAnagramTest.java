@@ -2,7 +2,7 @@ package InterviewQsTest;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import static com.niall.interviewqs.ValidAnagram.isAnagram;
+import static com.niall.interviewqs.ValidAnagram.*;
 
 public class ValidAnagramTest {
     
@@ -11,6 +11,7 @@ public class ValidAnagramTest {
         String s = "anagram";
         String t = "nagaram";
         assertTrue(isAnagram(s, t));
+        assertTrue(isAnagramAlt(s, t));
     }
     
     @Test
@@ -18,6 +19,7 @@ public class ValidAnagramTest {
         String s = "rat";
         String t = "car";
         assertFalse(isAnagram(s, t));
+        assertFalse(isAnagramAlt(s, t));
     }
     
 }
